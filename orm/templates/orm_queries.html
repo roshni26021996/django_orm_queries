@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            }
+
+            td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            }
+
+            tr:nth-child(even) {
+            background-color: #dddddd;
+            }
+        </style>
+    </head>
+    <body> 
+        <h5> 5 Country in ASC Order By Code </h5> 
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Code</th>
+                    <th>Country</th>
+                    <th>Phonecode</th>
+                </tr>
+            </thead>
+            </tbody> 
+                {% for  country in all_country_asc %}
+                    <tr>
+                        <td>{{country.id}}</td>
+                        <td>{{country.sortname}}</td>
+                        <td>{{country.name}}</td>
+                        <td>{{country.phonecode}}</td>
+                    </tr> 
+                {% endfor %} 
+            </tbody> 
+        </table> 
+        <h5> 5 Country in Desc Order By Phonecode </h5> 
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Code</th>
+                    <th>Country</th>
+                    <th>Phonecode</th>
+                </tr>
+            </thead>
+            </tbody> 
+                {% for  country in all_country_desc %}
+                    <tr>
+                        <td>{{country.id}}</td>
+                        <td>{{country.sortname}}</td>
+                        <td>{{country.name}}</td>
+                        <td>{{country.phonecode}}</td>
+                    </tr> 
+                {% endfor %} 
+            </tbody> 
+        </table> 
+        <h5> 5 Country </h5> 
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Code</th>
+                    <th>Country</th>
+                    <th>Phonecode</th>
+                </tr>
+            </thead>
+            </tbody> 
+                {% for  country in all_country_limit %}
+                    <tr>
+                        <td>{{country.id}}</td>
+                        <td>{{country.sortname}}</td>
+                        <td>{{country.name}}</td>
+                        <td>{{country.phonecode}}</td>
+                    </tr> 
+                {% endfor %} 
+            </tbody> 
+        </table> 
+        <h5> 5 Country Distinct </h5> 
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Code</th>
+                    <th>Country</th>
+                    <th>Phonecode</th>
+                </tr>
+            </thead>
+            </tbody> 
+                {% for  country in all_country_distinct %}
+                    <tr>
+                        <td>{{country.id}}</td>
+                        <td>{{country.sortname}}</td>
+                        <td>{{country.name}}</td>
+                        <td>{{country.phonecode}}</td>
+                    </tr> 
+                {% endfor %} 
+            </tbody> 
+        </table> 
+        <h5> 5 Country Between </h5> 
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Code</th>
+                    <th>Country</th>
+                    <th>Phonecode</th>
+                </tr>
+            </thead>
+            </tbody> 
+                {% for  country in all_country_between %}
+                    <tr>
+                        <td>{{country.id}}</td>
+                        <td>{{country.sortname}}</td>
+                        <td>{{country.name}}</td>
+                        <td>{{country.phonecode}}</td>
+                    </tr> 
+                {% endfor %} 
+            </tbody> 
+        </table> 
+        <h5> 5 Country Select </h5> 
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Code</th>
+                    <th>Country</th>
+                    <th>Phonecode</th>
+                </tr>
+            </thead>
+            </tbody> 
+                {% for  country in all_country_select %}
+                    <tr>
+                        <td>{{country.id}}</td>
+                        <td>{{country.sortname}}</td>
+                        <td>{{country.name}}</td>
+                        <td>{{country.phonecode}}</td>
+                    </tr> 
+                {% endfor %} 
+            </tbody> 
+        </table> 
+        <h5> 5 Country Count </h5> 
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Code</th>
+                    <th>Country</th>
+                    <th>Phonecode</th>
+                </tr>
+            </thead> 
+            </tbody>  
+                {% for  country in all_country_count %}
+                    <tr>
+                        <td>{{country.id}}</td>
+                        <td>{{country.sortname}}</td>
+                        <td>{{country.name}}</td>
+                        <td>{{country.phonecode}}</td>
+                    </tr> 
+                {% endfor %} 
+            </tbody>
+        </table> 
+    </body>
+</html>
